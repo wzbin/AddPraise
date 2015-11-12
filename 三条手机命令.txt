@@ -1,0 +1,6 @@
+ c. install AndroidDriver APK£º               
+ adb -s emulator-5554 -e install -r c:\android-server-2.21.0.apk   
+ d. start the Android WebDriver application                
+ adb -s emulator-5554 shell am start -a android.intent.action.MAIN -n org.openqa.selenium.android.app/.MainActivity  
+ e. setup the port forwarding in order to forward traffic from the host machine to the emulator      
+ adb -s emulator-5554 forward tcp:8080 tcp:8080
